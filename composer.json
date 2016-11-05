@@ -11,8 +11,14 @@
         }
     ],
     "autoload": {
+        "psr-4": {
+            "Fagoc\\": "app/src/"
+        }
     },
     "scripts": {
         "start": "php -S localhost:8000 -t public/"
+    },
+    "require": {
+        "phpzm/core": "^0.0.5"
     }
 }
