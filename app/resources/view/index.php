@@ -6,4 +6,4 @@ $this->append('partials/hero.php');
 
 $this->append('partials/call-to-action.php');
 
-$this->append('partials/section-three-columns.php');
+$this->append('partials/footer.php');
