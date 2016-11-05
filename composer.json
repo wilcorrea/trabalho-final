@@ -1,0 +1,18 @@
+{
+    "name": "phpzm/trabalho-final",
+    "type": "project",
+    "minimum-stability": "dev",
+    "version": "0.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grupo de PHP da Zona da Mata",
+            "email": "contato@phpzm.rocks"
+        }
+    ],
+    "autoload": {
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public/"
+    }
+}
