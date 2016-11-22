@@ -31,5 +31,6 @@ return function($router) {
     });
 
     $router->group('GET', '/produtos', 'app/routes/produtos.php');
+    $router->group('POST', '/produtos', 'app/routes/produtos.php');
 
 };

@@ -8,4 +8,6 @@ use Simples\Core\App;
 
 $output = App::output(__APP_ROOT__);
 
+App::headers($output);
+
 App::http($output);

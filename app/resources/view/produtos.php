@@ -4,11 +4,9 @@ $this->extend('layout/html.php', 'body');
 
 $this->append('partials/nav.php');
 
-$produtos = [
-    'notebook' => 'Notebook top demais',
-    'geladeira' => 'Geladeira enorme e linda',
-    'televisão' => 'TV Samsung SmarTV 60 polegadas',
-];
+$produto = new Fagoc\Produto();
+
+$produtos = $produto->select(['id', 'nome', 'valor', 'vencimento']);
 
 if ($this->get('id', false)) {
     $id = $this->get('id', false);
@@ -21,7 +19,7 @@ if ($this->get('id', false)) {
 ?>
 <div class="section">
 <?php
-foreach ($produtos as $key => $value) {
+foreach ($produtos as $value) {
     ?>
     <article class="media">
           <figure class="media-left">
@@ -31,9 +29,10 @@ foreach ($produtos as $key => $value) {
           </figure>
           <div class="media-content">
             <div class="content">
-              <a class="button is-primary" href="<?php $this->href('produtos/' . $key); ?>">Abrir</a>
+              <a class="button is-primary" href="<?php $this->href('produtos/' . $value->id); ?>">Abrir</a>
+                <a class="button is-danger" href="<?php $this->href('produtos/' . $value->id . '/remove'); ?>">Apagar</a>
               <p>
-                <?php out($value); ?>
+                <?php out($value->id); ?> / <?php out($value->nome); ?>
               </p>
             </div>
             <nav class="level">
