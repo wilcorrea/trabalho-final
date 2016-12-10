@@ -8,7 +8,7 @@ return function(Router $router) {
         '/home' => 'Home',
         '/menu' => 'Ementa',
         '/students' => 'Alunos',
-        '/contact' => 'Contato',
+        '/contact' => 'Fale Conosco',
     ];
 
     $router->data('title', 'Curso Básico PHP / 2016');
