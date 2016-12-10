@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'id'=> 'master',
+    'id'=> 'test',
     'test' => true,
     'database' => 'default'
 ];
