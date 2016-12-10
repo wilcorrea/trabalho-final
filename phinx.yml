@@ -7,10 +7,10 @@ environments:
     default_database: development
     production:
         adapter: mysql
-        host: localhost
-        name: production_db
-        user: root
-        pass: ''
+        host: mysql427.umbler.com
+        name: trabalho-final-1
+        user: william-correa
+        pass: 'o3v{L|DbC9'
         port: 3306
         charset: utf8
 
