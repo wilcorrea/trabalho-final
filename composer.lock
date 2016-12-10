@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7ea770ad03eaec6e606836e6181a3c5",
-    "content-hash": "2a8f6a820573f3af8ca42aaa9caa71fd",
+    "hash": "fbd753779a79ab625f31f76620338b66",
+    "content-hash": "3357ebd80afdfc95316167ed42871618",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -115,16 +115,16 @@
         },
         {
             "name": "phpzm/core",
-            "version": "dev-master",
+            "version": "0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpzm/core.git",
-                "reference": "11500639d8e71745f0be1f8bf45dfa5da622a9c7"
+                "reference": "811b384b8c8fac3959fc25b6b8a7f4aa822bc993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpzm/core/zipball/11500639d8e71745f0be1f8bf45dfa5da622a9c7",
-                "reference": "11500639d8e71745f0be1f8bf45dfa5da622a9c7",
+                "url": "https://api.github.com/repos/phpzm/core/zipball/811b384b8c8fac3959fc25b6b8a7f4aa822bc993",
+                "reference": "811b384b8c8fac3959fc25b6b8a7f4aa822bc993",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 "php",
                 "resource"
             ],
-            "time": "2016-11-12 00:03:47"
+            "time": "2016-12-10 19:10:29"
         },
         {
             "name": "psr/http-message",
@@ -670,9 +670,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "phpzm/core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

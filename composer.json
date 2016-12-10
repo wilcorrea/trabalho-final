@@ -23,7 +23,7 @@
         "seed": "php vendor/bin/phinx seed:run"
     },
     "require": {
-        "phpzm/core": "dev-master",
+        "phpzm/core": "0.0.7",
         "robmorgan/phinx": "^0.6.5",
         "fzaninotto/faker": "^1.6"
     }
