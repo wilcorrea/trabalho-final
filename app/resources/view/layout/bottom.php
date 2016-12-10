@@ -1,0 +1,1 @@
+<script src="<?php $this->js('/all.min.js'); ?>" type="text/javascript"></script>

@@ -1,0 +1,50 @@
+
+.hero-head .hero-nav {
+    height: 80px;
+}
+
+.hero-nav .nav-item-brand {
+    margin: 0 0 0 10px;
+}
+
+.hero-nav .nav-item {
+    font-size: 18px;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-nav .nav-item a, .hero-nav a.nav-item {
+    border-bottom: 3px solid transparent;
+}
+
+.hero-nav .nav-item a:hover, .hero-nav a.nav-item:hover {
+    border-color: rgba(50, 115, 220, 0.26);
+}
+
+.hero-nav .nav-item a.is-active, .hero-nav a.nav-item.is-active {
+    border-color: #3273dc;
+}
+
+.hero-nav a.nav-item:before {
+    left: 0;
+    top: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale3d(0, 0, 0);
+    transition: all;
+    transition-duration: .4s;
+    backface-visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.12);
+    z-index: 0;
+    border-radius: 2px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.hero-nav a.nav-item:hover:before {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    filter: alpha(opacity=100);
+}

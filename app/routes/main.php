@@ -1,16 +1,22 @@
 <?php
 
-return function($router) {
+use Simples\Core\Flow\Router;
+
+return function(Router $router) {
 
     $menu = [
         '/home' => 'Home',
-        '/produtos' => 'Produtos',
-        '/vendedores' => 'Vendedores',
-        '/contato' => 'Fale Conosco',
+        '/menu' => 'Ementa',
+        '/students' => 'Alunos',
+        '/contact' => 'Fale Conosco',
     ];
 
-    $callback = function() use ($menu) {
-        return $this->response()->view('index.php', ['title' => 'Página Inicial', 'menu' => $menu]);
+    $router->data('title', 'Curso Básico PHP / 2016');
+    $router->data('menu', $menu);
+
+    $callback = function($data) {
+        /** @var Router $this */
+        return $this->response()->html('pages/index.php', $data);
     };
 
     $router
@@ -18,19 +24,18 @@ return function($router) {
         ->on('GET', '/home', $callback)
         ->on('GET', '/index', $callback);
 
-    $router->on('GET', '/download', function() use ($menu) {
-        return $this->response()->view('download.php', ['title' => 'Página de Download', 'menu' => $menu]);
+    $router->get('/menu', '\Fagoc\HeroController@menu');
+
+    $router->get('/students', '\Fagoc\HeroController@students');
+
+    $router
+        ->get('/contact', '\Fagoc\HeroController@form')
+        ->post('/contact', '\Fagoc\HeroController@send');
+
+    $router->otherWise('GET', function($data) {
+
+        $data['title'] = $data['title'] . ' :: Página não encontrada';
+
+        return $this->response()->html('pages/404.php', $data);
     });
-
-    $router->on('GET', '/contato', function() use ($menu) {
-        return $this->response()->view('contato.php', ['title' => 'Fale Conosco', 'menu' => $menu]);
-    });
-
-    $router->on('POST', '/contato', function($data) use ($menu) {
-        return $this->response()->view('enviar.php', ['title' => 'Fale Conosco', 'all' => $this->request()->all(), 'menu' => $menu]);
-    });
-
-    $router->group('GET', '/produtos', 'app/routes/produtos.php');
-    $router->group('POST', '/produtos', 'app/routes/produtos.php');
-
 };

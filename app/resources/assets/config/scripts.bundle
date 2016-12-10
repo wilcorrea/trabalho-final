@@ -1,0 +1,11 @@
+
+module.exports = {
+  bundle: {
+    app: {
+      scripts: [
+        './node_modules/zepto/dist/zepto.min.js',
+        './app/resources/assets/js/**.js'
+      ]
+    }
+  }
+};

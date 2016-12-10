@@ -1,0 +1,31 @@
+{
+  "name": "trabalho-final",
+  "version": "1.0.0",
+  "description": "---- Trabalho de Conclusão do curso Desenvolvimento de Projetos em PHP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilcorrea/trabalho-final.git"
+  },
+  "author": "contato@phpzm.rocks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilcorrea/trabalho-final/issues"
+  },
+  "homepage": "https://github.com/wilcorrea/trabalho-final#readme",
+  "dependencies": {
+    "bulma": "^0.2.3",
+    "font-awesome": "^4.7.0",
+    "github-fork-ribbon-css": "^0.2.1",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-bundle-assets": "^2.27.1",
+    "gulp-rename": "^1.2.2"
+  }
+}
